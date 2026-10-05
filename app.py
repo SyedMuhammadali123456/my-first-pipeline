@@ -7,7 +7,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(f"2 + 3 = {add(2, 3)}\n".encode())
+        self.wfile.write(f"2 + 3 = {add(2, 3)} - v2\n".encode())
 
 if __name__ == "__main__":
     HTTPServer(("0.0.0.0", 8000), Handler).serve_forever()
